@@ -30,6 +30,6 @@ tmr.alarm(1,1000,tmr.ALARM_AUTO, function()
     print("-- You have 5 second to abort Startup --")
     print("-- Waiting --")
     --wifi.sta.getap(listap)
-    dofile("mqtt.lua")
+    dofile("mqtt_on_rasberri.lua")
   end
 end)
