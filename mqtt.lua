@@ -21,19 +21,16 @@ function(client, reason)
 end)
 
 function publish_data()
-
-  m:publish("test",t, 0,0, function(conn)
-    --- get SHT1x data and print to cloud broker
-    data = dofile("sht1x_v2.lua")
-    temp = (data[1])
-    hum  = (data[2])
-    print("temp: "..temp, "humm: "..hum)
-  	data = nil
-  	temp = nil
-  	hum = nil
-  	btemp = nil
-  	collectgarbage()
-
+  data = dofile("sht1x_v2.lua")
+  temp = (data[1])
+  hum = (data[2])
+  m:publish("test",temp, 0,0, function(conn)
+  print("Temp "..temp.." Hum "..hum)
+  data = nil
+	temp = nil
+	hum = nil
+	btemp = nil
+	collectgarbage()
   end)
 end
 
