@@ -2,7 +2,7 @@
 -- init file for sensor base on SHT1x chip
 -----------------------------------
 WIFI_SSID = "Zerno_IoT"
-WIFI_PASS = "28Shik0mba"
+WIFI_PASS = "my_pass"
 MQTT_BrokerIP = "192.168.1.2"
 MQTT_BrokerPort = 1883
 MQTT_ClientID = "sht-top"
