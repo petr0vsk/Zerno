@@ -3,7 +3,7 @@
 -----------------------------------------
 
 -- connect to mqtt broker at    https://www.cloudmqtt.com/
-m = mqtt.Client("clientid"..node.chipid(), 120, "ucnivmtq", "7EFWERh6IGGs")
+m = mqtt.Client("clientid"..node.chipid(), 120, "XXX", "XXXX")
 m:on("connect", function(client) print ("connected") end)
 m:on("offline", function(client) print ("offline") end)
 print("mqtt.lua")
